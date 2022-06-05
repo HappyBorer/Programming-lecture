@@ -11,15 +11,14 @@ while(distance > limitDistance)
     if(friends == true)
     {
         time = distance / (speedSecondFriend + speedDog);
-        distance = distance - time * (speedFirstFriend + speedSecondFriend);
         friends = false;
     }
     else
     {
         time = distance / (speedFirstFriend + speedDog);
-        distance = distance - time * (speedFirstFriend + speedSecondFriend);
         friends = true;
     }
+     distance = distance - time * (speedFirstFriend + speedSecondFriend);
     counter++;
 }
 Console.WriteLine(counter);
